@@ -1,0 +1,18 @@
+{
+  "You do not have access to this information": "คุณไม่มีสิทธิ์เข้าถึงข้อมูลนี้",
+  "Data retrieved successfully": "ดึงข้อมูลเรียบร้อยแล้ว",
+  "Data is invalid": "ข้อมูลไม่ถูกต้อง",
+  "Logout successfully": "ลงชื่อออกเรียบร้อยแล้ว",
+  "Locale is invalid": "ตำแหน่งที่ตั้งไม่ถูกต้อง",
+  "Email or Password is invalid": "อีเมลหรือรหัสผ่านไม่ถูกต้อง",
+  "Email is invalid": "อีเมลไม่ถูกต้อง",
+  "Password is required": "ต้องระบุรหัสผ่าน",
+  "Password is mismatch": "รหัสผ่านไม่ตรงกัน",
+  "Name is required": "ต้องระบุชื่อ",
+  "Surname is required": "ต้องระบุนามสกุล",
+  "Register successfully": "การลงทะเบียนเสร็จสิ้น",
+  "Login Successfully": "ลงชื่อเข้าใช้เรียบร้อยแล้ว",
+  "Email has already taken": "อีเมลนี้มีผู้ใช้งานแล้ว",
+  "Internal Server Error": "ข้อผิดพลาดจากระบบ",
+  "Welcome": "ยินดีต้อนรับ"
+}

@@ -1,0 +1,36 @@
+image: node:latest
+
+cache:
+  key: node_modules
+  paths:
+  - node_modules
+
+before_script:
+- apt-get update -qq && apt-get install -y -qq sshpass
+- curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
+- echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
+- apt-get update && sudo apt-get install yarn
+- yarn --version
+
+stages:
+- install
+- deploy
+
+install:
+  stage: install
+  only:
+  - master
+  - production
+  script:
+  - npm install
+  artifacts:
+    paths:
+    - node_modules
+
+deploy:
+  stage: deploy
+  only:
+  - master
+  script:
+  - export SSHPASS=superder999+
+  - sshpass -e ssh -o "StrictHostKeyChecking=no" ubuntu@share-pro-aws.superder.me "cd ~/api-super && git checkout . && git pull && rm -rf package-lock.json && npm install && gulp compile && pm2 restart API"

@@ -1,4 +1,6 @@
-module.exports = {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = {
     port: 3000,
     host: "localhost",
     tokenExpire: false,
@@ -8,4 +10,4 @@ module.exports = {
     swaggerUIPath: "/swaggerui/",
     documentationPath: "/documentation",
     jsonPath: "/swagger.json"
-}
+};

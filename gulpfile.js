@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var ts = require('gulp-typescript');
 var nodemon = require('gulp-nodemon');
-var jsProject = ts.createProject('jsconfig.json');
+var tsProject = ts.createProject('tsconfig.json');
 var clean = require('gulp-clean');
 
 gulp.task('clean', function () {
@@ -11,7 +11,8 @@ gulp.task('clean', function () {
 });
 
 gulp.task('compile', function () {
-    return gulp.src('src/**/*.js')
+    return gulp.src('src/**/*.ts')
+        .pipe(tsProject())
         .pipe(gulp.dest('dist'));
 });
 
