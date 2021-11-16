@@ -9,7 +9,7 @@
   "dependencies": {
     "@types/es6-promise": "^3.3.0",
     "@types/node": "^10.12.12",
-    "aws-sdk": "^2.424.0",
+    "aws-sdk": "^2.814.0",
     "axios": "^0.18.0",
     "bcrypt": "^3.0.2",
     "blob-stream": "^0.1.3",
